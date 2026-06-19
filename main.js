@@ -1,24 +1,6 @@
 window.onload = function () {
 
-    let nav = document.querySelector("nav");
 
-    if (nav != null) {
-        let menuButton = document.createElement("button");
-        menuButton.innerHTML = "☰ Menu";
-        menuButton.className = "menu-btn";
-
-        nav.parentNode.insertBefore(menuButton, nav);
-
-        menuButton.onclick = function () {
-            nav.classList.toggle("show-nav");
-
-            if (nav.classList.contains("show-nav")) {
-                menuButton.innerHTML = "Close Menu";
-            } else {
-                menuButton.innerHTML = "☰ Menu";
-            }
-        };
-    }
 
     let page = window.location.pathname.split("/").pop();
     let links = document.querySelectorAll("nav a");
@@ -30,9 +12,6 @@ window.onload = function () {
     }
 
     let topButton = document.createElement("button");
-    topButton.innerHTML = "↑";
-    topButton.className = "back-to-top";
-    document.body.appendChild(topButton);
 
     window.onscroll = function () {
         if (window.scrollY > 300) {
