@@ -11,8 +11,6 @@ window.onload = function () {
         }
     }
 
-    let topButton = document.createElement("button");
-
     window.onscroll = function () {
         if (window.scrollY > 300) {
             topButton.style.display = "block";
